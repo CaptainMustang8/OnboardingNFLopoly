@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class NFLopoly {
 	
 	private static int numberOfPlayers;
-	private int startingCashAmount;
-	private Board board = new Board();
-	private ArrayList<Owner> owners = new ArrayList<>();
+	private static int startingCashAmount;
+	private static Board board = new Board();
+	private static ArrayList<Owner> owners = new ArrayList<>();
 	
 	public NFLopoly(int numPlayers, int initialAmount) throws Exception{
 		if(numPlayers < 2 || numPlayers > 6){
@@ -22,7 +22,7 @@ public class NFLopoly {
 		
 	}
 	
-	public void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		NFLopoly nfLopoly = new NFLopoly(3, 500);
 		createOwners();
@@ -30,7 +30,7 @@ public class NFLopoly {
 	}
 
 
-	private void createOwners() throws Exception { // "Owners" are the players
+	private static void createOwners() throws Exception { // "Owners" are the players
 		for(int i = 0; i < numberOfPlayers; i++){
 			Owner owner = new Owner(startingCashAmount, board);
 			owners.add(owner);
@@ -38,10 +38,20 @@ public class NFLopoly {
 	}
 	
 	private void runGame() {
-//		for(;;){
-//			
-//		}
-//		
+		
+		int dieAmount;
+		
+		for(;;){
+			for(int i = 0; i < owners.size(); i++){
+				dieAmount = board.rollDice();
+				
+				//option1
+				owners.get(i).performTurn(dieAmount);
+				System.out.println("Owner: " + i + " is at space " + owners.get(i).getCurrentSpaceIndex());
+				
+			}
+		}
+		
 	}
 
 }

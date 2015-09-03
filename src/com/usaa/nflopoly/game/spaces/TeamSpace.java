@@ -1,10 +1,9 @@
 package com.usaa.nflopoly.game.spaces;
 
-public class TeamSpace extends Space {
+public class TeamSpace extends PropertySpace {
 
-	public TeamSpace(int indexValue) {
-		super(indexValue);
-		// TODO Auto-generated constructor stub
+	public TeamSpace(int indexValue, Boolean isOwned, String name) {
+		super(indexValue, isOwned, name);
 	}
 
 }

@@ -1,10 +1,18 @@
 package com.usaa.nflopoly.game.spaces;
 
-public class GoToJailSpace extends Space {
+import com.usaa.nflopoly.game.Owner;
 
-	public GoToJailSpace(int indexValue) {
-		super(indexValue);
+public class GoToJailSpace extends BaseSpace {
+
+	public GoToJailSpace(int indexValue, String name) {
+		super(indexValue, null, name);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void performAction(Owner owner) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

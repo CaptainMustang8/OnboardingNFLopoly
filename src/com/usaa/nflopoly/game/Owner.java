@@ -2,7 +2,7 @@ package com.usaa.nflopoly.game;
 
 import java.util.ArrayList;
 
-import com.usaa.nflopoly.game.spaces.Space;
+import com.usaa.nflopoly.game.spaces.BaseSpace;
 import com.usaa.nflopoly.game.spaces.TeamSpace;
 
 public class Owner {
@@ -10,7 +10,7 @@ public class Owner {
 	private int cash;
 	private boolean inJail;
 	private ArrayList<TeamSpace> teams;
-	private Space currentSpace;
+	private BaseSpace currentSpace;
 	private int currentSpaceIndex;
 	private Board board;
 	
@@ -19,17 +19,23 @@ public class Owner {
 			throw new Exception("Starting Cash Amount for Owner must be between $0 and $5000");
 		}
 		this.board = board;
-		this.cash = startingCashAmount;
+		setCashAmount(startingCashAmount);
 		setCurrentSpace(board.getSpace(0));
+		setCurrentSpaceIndex(0);
 	}
 	
 	public void moveForward(int dieAmount){
 		//TODO fix to actually get a Space object?
 		int futureSpaceIndex = getCurrentSpace().getIndexValue() + dieAmount;
-		setCurrentSpace(board.getSpace(futureSpaceIndex));
 		
+		//making sure we loop back around the start of the "board" (array)
+		if(futureSpaceIndex > 39){
+			futureSpaceIndex = futureSpaceIndex - board.getBoardSize();
+		}
+		setCurrentSpace(board.getSpace(futureSpaceIndex));
+		setCurrentSpaceIndex(futureSpaceIndex);
 	}
-	
+
 	public int getTotalWorth(){
 		return totalWorth;
 	}
@@ -62,16 +68,29 @@ public class Owner {
 		teams = ownerTeams;
 	}
 	
-	public Space getCurrentSpace(){
+	public void addTeam(TeamSpace team){
+		teams.add(team);
+	}
+	
+	public BaseSpace getCurrentSpace(){
 		return currentSpace;
 	}
 	
-	public void setCurrentSpace(Space space){
+	public void setCurrentSpace(BaseSpace space){
 		currentSpace = space;
 	}
 	
-	public void performSpaceAction(Space space){
-		board.performSpaceAction(space, this);
+	public int getCurrentSpaceIndex(){
+		return currentSpaceIndex;
+	}
+	
+	public void setCurrentSpaceIndex(int spaceIndex){
+		currentSpaceIndex = spaceIndex;
+	}
+
+	public void performTurn(int dieAmount) {
+		moveForward(dieAmount);
+		getCurrentSpace().performAction(this);
 	}
 
 
