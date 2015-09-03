@@ -13,17 +13,27 @@ public class Owner {
 	private BaseSpace currentSpace;
 	private int currentSpaceIndex;
 	private Board board;
+	private String name;
 	
-	public Owner(int startingCashAmount, Board board) throws Exception{
+	public Owner(int startingCashAmount, Board board, String name) throws Exception{
 		if(startingCashAmount >= 5000 || startingCashAmount < 0){
 			throw new Exception("Starting Cash Amount for Owner must be between $0 and $5000");
 		}
 		this.board = board;
-		setCashAmount(startingCashAmount);
+		setCash(startingCashAmount);
 		setCurrentSpace(board.getSpace(0));
 		setCurrentSpaceIndex(0);
+		setName(name);
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void moveForward(int dieAmount){
 		//TODO fix to actually get a Space object?
 		int futureSpaceIndex = getCurrentSpace().getIndexValue() + dieAmount;
@@ -44,11 +54,11 @@ public class Owner {
 		totalWorth = worth;
 	}
 	
-	public int getCashAmount(){
+	public int getCash(){
 		return cash;
 	}
 	
-	public void setCashAmount(int cashAmount){
+	public void setCash(int cashAmount){
 		cash = cashAmount;
 	}
 	
@@ -91,6 +101,17 @@ public class Owner {
 	public void performTurn(int dieAmount) {
 		moveForward(dieAmount);
 		getCurrentSpace().performAction(this);
+	}
+
+	public void payRent(int rentAmount, Owner owner) {
+		if(rentAmount > getCash()){
+			
+		}
+		
+	}
+
+	public void buyTeam(int teamPrice) {
+		setCash(getCash() - teamPrice);
 	}
 
 

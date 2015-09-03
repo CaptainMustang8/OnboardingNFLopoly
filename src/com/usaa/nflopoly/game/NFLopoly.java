@@ -32,7 +32,7 @@ public class NFLopoly {
 
 	private static void createOwners() throws Exception { // "Owners" are the players
 		for(int i = 0; i < numberOfPlayers; i++){
-			Owner owner = new Owner(startingCashAmount, board);
+			Owner owner = new Owner(startingCashAmount, board, "Player" + i);
 			owners.add(owner);
 		}
 	}
