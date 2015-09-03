@@ -6,78 +6,291 @@
 	    "Value": "200"}
 	},
 	{"Space2": {
-	    "Type": "GO",
+	    "Type": "TEAM",
 	    "Name": "Jacksonville Jaguars",
 	    "Value": "70"}
 	},
+	
+	{"Space3": {
+	    "Type": "CARD",
+	    "Name": "Card1",
+	    "Value": "50"}
+	},
     
-    {"Card1":"50"},
+    {"Space4": {
+	    "Type": "TEAM",
+	    "Name": "Tennessee Titans",
+	    "Value": "70"}
+	},
+	
+	{"Space5": {
+	    "Type": "TEAM",
+	    "Name": "Houston Texans",
+	    "Value": "80"}
+	},
+	
+	{"Space6": {
+	    "Type": "TEAM",
+	    "Name": "Indianapolis Colts",
+	    "Value": "80"}
+	},
+	
+	{"Space7": {
+	    "Type": "NETWORK",
+	    "Name": "FOX Sports",
+	    "Value": "250"}
+	},
+	
+	{"Space8": {
+	    "Type": "TEAM",
+	    "Name": "Tampa Bay Buccaneers",
+	    "Value": "90"}
+	},
+
+	{"Space9": {
+	    "Type": "CARD",
+	    "Name": "Card2",
+	    "Value": "50"}
+	},
+	
+	{"Space10": {
+	    "Type": "TEAM",
+	    "Name": "Carolina Panthers",
+	    "Value": "90"}
+	},
+	
+	{"Space11": {
+	    "Type": "TEAM",
+	    "Name": "Atlanta Falcons",
+	    "Value": "100"}
+	},
+
+	{"Space12": {
+	    "Type": "TEAM",
+	    "Name": "New Orleans Saints",
+	    "Value": "100"}
+	},
+
+	{"Space13": {
+	    "Type": "JAIL",
+	    "Name": "Jail",
+	    "Value": "null"}
+	},
+
+	{"Space14": {
+	    "Type": "TEAM",
+	    "Name": "Oakland Raiders",
+	    "Value": "130"}
+	},
+
+	{"Space15": {
+	    "Type": "TEAM",
+	    "Name": "San Diego Chargers",
+	    "Value": "130"}
+	},
     
-    {"Tennessee Titans":"70"},
-    {"Houston Texans":"80"},
-    {"Indianapolis Colts":"80"},
-    {"Fox Sports":"250"},
-    {"Tampa Bay Buccaneers": "90"},
+    {"Space16": {
+	    "Type": "TEAM",
+	    "Name": "Kansas City Chiefs",
+	    "Value": "140"}
+	},
     
-    {"Card2":"50"},
+    {"Space17": {
+	    "Type": "CARD",
+	    "Name": "Card3",
+	    "Value": "50"}
+	},
     
-    {"Carolina Panthers":"90"},
-    {"Atlanta Falcons":"100"},
-    {"New Orleans Saints":"100"},
+    {"Space18": {
+	    "Type": "TEAM",
+	    "Name": "Denver Broncos",
+	    "Value": "150"}
+	},
     
-    {"Jail":"null"},
+    {"Space19": {
+	    "Type": "TEAM",
+	    "Name": "Jacksonville Jaguars",
+	    "Value": "70"}
+	},
+	
+	{"Space20": {
+	    "Type": "NETWORK",
+	    "Name": "CBS Sports",
+	    "Value": "250"}
+	},
+	
+	{"Space21": {
+	    "Type": "TEAM",
+	    "Name": "St. Louis Rams",
+	    "Value": "170"}
+	},
     
-    {"Oakland Raiders":"130"},
-    {"San Diego Chargers":"130"},
-    {"Kansas City Chiefs":"140"},
+    {"Space22": {
+	    "Type": "CARD",
+	    "Name": "Card4",
+	    "Value": "50"}
+	},
+ 
+ 	{"Space23": {
+	    "Type": "TEAM",
+	    "Name": "Arizona Cardinals",
+	    "Value": "170"}
+	},
     
-    {"Card3":"50"},
+    {"Space24": {
+	    "Type": "TEAM",
+	    "Name": "San Francisco 49ers",
+	    "Value": "180"}
+	},
     
-    {"Denver Broncos":"150"},
-    {"CBS Sports":"250"},
-    {"Saint Louis Rams":"170"},
+    {"Space25": {
+	    "Type": "TEAM",
+	    "Name": "Seattle Seahawks",
+	    "Value": "190"}
+	},
+   
+   	{"Space26": {
+	    "Type": "JACKPOT",
+	    "Name": "Jackpot",
+	    "Value": "0"}
+	},
+
+	{"Space27": {
+	    "Type": "TEAM",
+	    "Name": "Cleveland Browns",
+	    "Value": "210"}
+	},
     
-    {"Card4":"50"},
+    {"Space28": {
+	    "Type": "CARD",
+	    "Name": "Card5",
+	    "Value": "50"}
+	},
     
-    {"Arizona Cardinals":"170"},
-    {"San Francisco 49ers":"180"},
-    {"Seattle Seahawks":"190"},
+    {"Space29": {
+	    "Type": "TEAM",
+	    "Name": "Cincinnati Bengals",
+	    "Value": "210"}
+	},
     
-    {"Jackpot":"0"},
+    {"Space30": {
+	    "Type": "TEAM",
+	    "Name": "Baltimore Ravens",
+	    "Value": "220"}
+	},
+
+	{"Space31": {
+	    "Type": "TEAM",
+	    "Name": "Pittsburgh Steelers",
+	    "Value": "230"}
+	},
+	
+    {"Space32": {
+	    "Type": "NETWORK",
+	    "Name": "ESPN",
+	    "Value": "250"}
+	},
+
+	{"Space33": {
+	    "Type": "TEAM",
+	    "Name": "Minnesota Vikings",
+	    "Value": "250"}
+	},
+
+	{"Space34": {
+	    "Type": "TEAM",
+	    "Name": "Chicago Bears",
+	    "Value": "250"}
+	},
+
+    {"Space35": {
+	    "Type": "CARD",
+	    "Name": "Card6",
+	    "Value": "50"}
+	},
     
-    {"Cleveland Browns":"210"},
+    {"Space36": {
+	    "Type": "TEAM",
+	    "Name": "Detroit Lions",
+	    "Value": "260"}
+	},
     
-    {"Card5":"50"},
+    {"Space37": {
+	    "Type": "TEAM",
+	    "Name": "Green Bay Packers",
+	    "Value": "270"}
+	},
     
-    {"Cincinnati Bengals":"210"},
-    {"Baltimore Ravens":"220"},
-    {"Pittsburgh Steelers":"230"},
+    {"Space38": {
+	    "Type": "GOTOJAIL",
+	    "Name": "Go to Jail",
+	    "Value": "null"}
+	},
     
-    {"ESPN":"250"},
+    {"Space39": {
+	    "Type": "TEAM",
+	    "Name": "Miami Dolphins",
+	    "Value": "290"}
+	},
     
-    {"Minnesota Vikings":"250"},
-    {"Chicago Bears":"250"},
+    {"Space40": {
+	    "Type": "TEAM",
+	    "Name": "New York Jets",
+	    "Value": "290"}
+	},
     
-    {"Card6":"50"},
+    {"Space41": {
+	    "Type": "CARD",
+	    "Name": "Card7",
+	    "Value": "50"}
+	},
     
-    {"Detroit Lions":"260"},
-    {"Green Bay Packers":"270"},
+    {"Space42": {
+	    "Type": "TEAM",
+	    "Name": "Buffalo Bills",
+	    "Value": "300"}
+	},
     
-    {"Go to Jail":"null"},
+    {"Space43": {
+	    "Type": "TEAM",
+	    "Name": "New England Patriots",
+	    "Value": "310"}
+	},
     
-    {"Miami Dolphins":"290"},
-    {"New York Jets":"290"},
+    {"Space44": {
+	    "Type": "NETWORK",
+	    "Name": "NBC Sports",
+	    "Value": "250"}
+	},
     
-    {"Card7":"50"},
-    {"Buffalo Bills":"300"},
-    {"New England Patriots":"310"},
-    {"NBC Sports":"250"},
-    {"Washington Redskins":"375"},
-    {"Card8":"50"},
-    {"New York Giants":"385"},
-    {"Philadelphia Eagles":"400"},
-    {"Dallas Cowboys":"425"}
+    {"Space45": {
+	    "Type": "TEAM",
+	    "Name": "Washington Redskins",
+	    "Value": "375"}
+	},
     
-  ]
-  
+   	{"Space46": {
+	    "Type": "CARD",
+	    "Name": "Card8",
+	    "Value": "50"}
+	},
+	
+	{"Space47": {
+	    "Type": "TEAM",
+	    "Name": "New York Giants",
+	    "Value": "385"}
+	},
+	
+	{"Space48": {
+	    "Type": "TEAM",
+	    "Name": "Philadelphia Eagles",
+	    "Value": "400"}
+	},
+	
+	{"Space49": {
+	    "Type": "TEAM",
+	    "Name": "Dallas Cowboys",
+	    "Value": "425"}
+	},
+  ] 
 }
