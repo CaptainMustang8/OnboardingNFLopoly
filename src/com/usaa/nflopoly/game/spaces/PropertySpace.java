@@ -20,7 +20,7 @@ public class PropertySpace extends BaseSpace {
 
 	@Override
 	public void performAction(Owner owner) {
-		// TODO Auto-generated method stub
+		return;
 		
 	}
 

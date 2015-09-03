@@ -9,10 +9,10 @@ public class GoToJailSpace extends BaseSpace {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public void performAction(Owner owner) {
-		// TODO Auto-generated method stub
-		
+		//Figure out how to send player to jail square
+		owner.setInJailStatus(true);
+		System.out.println(owner.getName() + " just got sent to Jail!");
 	}
 
 }

@@ -6,12 +6,15 @@ public class JailSpace extends BaseSpace {
 
 	public JailSpace(int indexValue, String name) {
 		super(indexValue, null, name);
-		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public void performAction(Owner owner) {
-		// TODO Auto-generated method stub
+		if(owner.getInJailStatus() == true){
+			System.out.println(owner.getName() + " is in Jail!");
+		}
+		else{
+			System.out.println(owner.getName() + " is just visiting Jail. For now.");
+		}
 		
 	}
 
