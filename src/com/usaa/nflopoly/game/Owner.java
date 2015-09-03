@@ -103,15 +103,14 @@ public class Owner {
 		getCurrentSpace().performAction(this);
 	}
 
-	public void payRent(int rentAmount, Owner owner) {
-		if(rentAmount > getCash()){
-			
-		}
-		
+	public void payRent(int rentAmount, Owner payee) {
+		setCash(getCash() - rentAmount);
+		payee.setCash((payee.getCash() + rentAmount)); 
 	}
 
 	public void buyTeam(int teamPrice) {
 		setCash(getCash() - teamPrice);
+		getCurrentSpace().setIsOwned(true);
 	}
 
 

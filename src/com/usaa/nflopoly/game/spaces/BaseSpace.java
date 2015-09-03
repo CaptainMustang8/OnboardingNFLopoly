@@ -32,10 +32,14 @@ public abstract class BaseSpace {
 	}
 	
 	public Owner getOwner(){
+		if(owner == null){
+			return null;
+		}
 		return owner;
 	}
 	
-	public void setOwner(Owner newOwner){
+	public void setOwner(Owner owner){
+		System.out.println("in base space");
 		this.owner = owner;
 	}
 	

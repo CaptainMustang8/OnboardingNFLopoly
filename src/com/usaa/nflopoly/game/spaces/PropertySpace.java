@@ -6,8 +6,9 @@ public class PropertySpace extends BaseSpace {
 	
 	private int value;
 	
-	public PropertySpace(int indexValue, Boolean isOwned, String name){
+	public PropertySpace(int indexValue, Boolean isOwned, String name, int value){
 		super(indexValue, isOwned, name);
+		setValue(value);
 	}
 
 	public int getValue() {

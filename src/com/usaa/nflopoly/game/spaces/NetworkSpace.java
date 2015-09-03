@@ -4,8 +4,8 @@ import com.usaa.nflopoly.game.Owner;
 
 public class NetworkSpace extends PropertySpace {
 
-	public NetworkSpace(int indexValue, Boolean isOwned, String name) {
-		super(indexValue, isOwned, name);
+	public NetworkSpace(int indexValue, Boolean isOwned, String name, int networkValue) {
+		super(indexValue, isOwned, name, networkValue);
 		// TODO Auto-generated constructor stub
 	}
 
