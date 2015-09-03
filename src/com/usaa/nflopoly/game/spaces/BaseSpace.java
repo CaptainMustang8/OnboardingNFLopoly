@@ -47,4 +47,5 @@ public abstract class BaseSpace {
 		this.name = newName;
 	}
 	public abstract void performAction(Owner owner);
+	
 }

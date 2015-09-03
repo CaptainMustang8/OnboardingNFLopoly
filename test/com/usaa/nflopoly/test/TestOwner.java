@@ -43,7 +43,7 @@ public class TestOwner {
 	
 	@Test
 	public void ownerShouldMoveForwardTheAmountSpecifiedByDiceRoll() throws Exception{
-		Owner owner = new Owner(100, board);
+		Owner owner = new Owner(100, board, "Player1");
 		int diceRoll = board.rollDice();
 		owner.moveForward(diceRoll);
 		//TODO comeback and re test once the spaces are different
@@ -52,7 +52,7 @@ public class TestOwner {
 	
 	@Test
 	public void ownerShouldNotMoveToSpaceWithIndexGreaterThanBoardSize() throws Exception{
-		Owner owner = new Owner(100, board);
+		Owner owner = new Owner(100, board, "Player1");
 		owner.moveForward(board.getBoardSize() + 2);
 		assertEquals(owner.getCurrentSpaceIndex(), 42);
 		
