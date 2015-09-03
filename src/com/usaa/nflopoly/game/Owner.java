@@ -2,19 +2,32 @@ package com.usaa.nflopoly.game;
 
 import java.util.ArrayList;
 
+import com.usaa.nflopoly.game.spaces.Space;
+import com.usaa.nflopoly.game.spaces.TeamSpace;
+
 public class Owner {
 	private int totalWorth;
 	private int cash;
 	private boolean inJail;
 	private ArrayList<TeamSpace> teams;
-	private int currentSpace;
+	private Space currentSpace;
+	private int currentSpaceIndex;
+	private Board board;
 	
-	public Owner(){
-		// default constructor
+	public Owner(int startingCashAmount, Board board) throws Exception{
+		if(startingCashAmount >= 5000 || startingCashAmount < 0){
+			throw new Exception("Starting Cash Amount for Owner must be between $0 and $5000");
+		}
+		this.board = board;
+		this.cash = startingCashAmount;
+		setCurrentSpace(board.getSpace(0));
 	}
 	
 	public void moveForward(int dieAmount){
-		currentSpace += dieAmount;
+		//TODO fix to actually get a Space object?
+		int futureSpaceIndex = getCurrentSpace().getIndexValue() + dieAmount;
+		setCurrentSpace(board.getSpace(futureSpaceIndex));
+		
 	}
 	
 	public int getTotalWorth(){
@@ -49,11 +62,18 @@ public class Owner {
 		teams = ownerTeams;
 	}
 	
-	public int getCurrentSpace(){
+	public Space getCurrentSpace(){
 		return currentSpace;
 	}
 	
-	public void setCurrentSpace(int space){
+	public void setCurrentSpace(Space space){
 		currentSpace = space;
 	}
+	
+	public void performSpaceAction(Space space){
+		board.performSpaceAction(space, this);
+	}
+
+
+	
 }

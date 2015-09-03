@@ -1,8 +1,13 @@
 package com.usaa.nflopoly.game;
 
+import java.util.ArrayList;
+
 public class NFLopoly {
-	private int numberOfPlayers;
+	
+	private static int numberOfPlayers;
 	private int startingCashAmount;
+	private Board board = new Board();
+	private ArrayList<Owner> owners = new ArrayList<>();
 	
 	public NFLopoly(int numPlayers, int initialAmount) throws Exception{
 		if(numPlayers < 2 || numPlayers > 6){
@@ -17,14 +22,26 @@ public class NFLopoly {
 		
 	}
 	
-	public static void main(String[] args) throws Exception {
+	public void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		NFLopoly nfLopoly = new NFLopoly(3, 500);
-		nfLopoly.startGame();
+		createOwners();
+		nfLopoly.runGame();
 	}
 
-	private void startGame() {
-		//FUN STUFF HERE
+
+	private void createOwners() throws Exception { // "Owners" are the players
+		for(int i = 0; i < numberOfPlayers; i++){
+			Owner owner = new Owner(startingCashAmount, board);
+			owners.add(owner);
+		}
+	}
+	
+	private void runGame() {
+//		for(;;){
+//			
+//		}
+//		
 	}
 
 }

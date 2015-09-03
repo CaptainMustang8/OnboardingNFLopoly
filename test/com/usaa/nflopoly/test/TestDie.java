@@ -26,7 +26,8 @@ public class TestDie {
 	
 	@Test
 	public void testRoll() {
-		int faceValue = die.roll();
+		die.roll();
+		int faceValue = die.getValue();
 		Boolean inRange = 0 < faceValue && faceValue < 7;
 		assertTrue(inRange);
 		
