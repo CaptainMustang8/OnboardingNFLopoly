@@ -2,6 +2,7 @@ package com.usaa.nflopoly.test;
 
 import static org.junit.Assert.assertEquals;
 
+import org.json.JSONException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -36,7 +37,7 @@ public class TestOwner {
 //	}
 	
 	@Before
-	public void setup(){
+	public void setup() throws JSONException{
 		board = new Board();
 	}
 	
