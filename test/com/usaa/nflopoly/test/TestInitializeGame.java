@@ -10,7 +10,7 @@ public class TestInitializeGame {
 	
 
 	@Test
-	public void testTooFewPlayers(){
+	public void shouldNotAllowFewerThanTwoPlayers(){
 		try{
 			NFLopoly nfLopoly = new NFLopoly(1, 100);
 			fail("Game should not have been initialized with < 2 players.");
@@ -21,7 +21,7 @@ public class TestInitializeGame {
 	}
 	
 	@Test
-	public void testTooManyPlayers(){
+	public void shouldNotAllowGameToStartWithFewerThanTwoPlayers(){
 		try{
 			NFLopoly nfLopoly = new NFLopoly(7, 100);
 			fail("Game should not have been initialized with > 7 players.");
@@ -32,7 +32,7 @@ public class TestInitializeGame {
 	}
 	
 	@Test 
-	public void testBadInitialAmount(){
+	public void shouldNotAllowPlayerCashValueToStartBelowOneDollar(){
 		try{
 			NFLopoly nfLopoly = new NFLopoly(4, 0);
 			fail("Game should not have been initialized with <= 0 dollars");
@@ -43,17 +43,17 @@ public class TestInitializeGame {
 	}
 	
 	@Test 
-	public void testGoodInitialAmount(){
+	public void shouldAllowGameToStartWithPlayerCashGreaterThanOneDollar(){
 		try{
 			NFLopoly nfLopoly = new NFLopoly(4, 100);
 		}
 		catch(Exception e){
-			fail("Exception should not have been thrown.  Initial Amount is good.");
+			fail("Exception should not have been thrown.  Initial player cash value is good.");
 		}
 	}
 	
 	@Test
-	public void testGoodPlayerAmount(){
+	public void shouldAllowGameToStartWithPlayerNumberBetweenTwoAndSixPlayers(){
 		try{
 			NFLopoly nfLopoly = new NFLopoly(3, 100);
 		}
