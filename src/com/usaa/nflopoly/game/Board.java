@@ -1,6 +1,11 @@
 package com.usaa.nflopoly.game;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.usaa.nflopoly.game.spaces.BaseSpace;
+import com.usaa.nflopoly.util.JsonParser;
 
 public class Board {
 	
@@ -12,14 +17,37 @@ public class Board {
 	public Board(){
 		makeSpaces();
 	}
+	
+
 
 	private void makeSpaces() {
-		for(int i = 0; i < BOARD_SIZE; i++){
-			BaseSpace s = new BaseSpace(i);
-			SPACES[i] = s;
+		try {
+			JsonParser jsonParser = new JsonParser();
+			JSONObject jsonOBject = jsonParser.parseFile("spaces.json");
+
+			JSONArray jarr;
+
+			jarr = new JSONArray(jsonOBject.getJSONArray("Spaces").toString());
+
+			for(int i = 0; i < jarr.length(); i++) {
+				System.out.println(jarr.getJSONObject(i).toString());
+			}
+
+
+			for(int i = 0; i < BOARD_SIZE; i++){
+
+				//SPACES[i] = s;
+			}
+		}
+		catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
-	
+
+
+
+
 	private void diceRoll(){
 		DIE1.roll();
 		DIE2.roll();
